@@ -1,3 +1,5 @@
+#include "vehicle.h"
+
 /********************************* Vehicle ************************************/
 /*
     Contains all position and colour data for a vehicle
@@ -12,12 +14,10 @@
 */
 /******************************************************************************/
 
-#include "vehicle.h"
-
-Vehicle::Vehicle(QPoint p, QColor c) :
-    m_position{p}, m_colour{c}
+Vehicle::Vehicle(QPoint position, QSize size, QColor colour) :
+    m_position{position}, m_size{size}, m_colour {colour}
 {
-
+    
 }
 
 QPoint Vehicle::position() const
@@ -25,17 +25,23 @@ QPoint Vehicle::position() const
     return m_position;
 }
 
+QSize Vehicle::size() const
+{
+    return m_size;
+}
+
 QColor Vehicle::colour() const
 {
     return m_colour;
 }
 
-void Vehicle::set_position(QPoint position)
+// The colour is set according to the stop where the bus is at
+void Vehicle::setPosition(QPoint position)
 {
     m_position = position;
 }
 
-void Vehicle::set_colour(QColor colour)
+void Vehicle::setColour(QColor colour)
 {
     m_colour = colour;
 }

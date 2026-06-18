@@ -2,5 +2,5 @@
   <Configurations>
     <Platform Name="x64" />
   </Configurations>
-  <Project Path="Terminus.vcxproj" />
+  <Project Path="Terminus.vcxproj" Id="cfa28626-664d-4c1a-bc7a-b99effa4bbe9" />
 </Solution>

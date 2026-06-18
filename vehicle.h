@@ -3,10 +3,13 @@
 #include <QColor>
 #include <QPainter>
 #include <QPoint>
+#include <QSize>
+
 
 /********************************* Vehicle ************************************/
 /* 
     Contains all position and colour data for a vehicle
+	Every Vehicle has a fleet number, running number and trip number
 
 	Yellow = Good headway to bus in front
 	Red = Too close to bus in front (acceptable in some cases)
@@ -22,15 +25,16 @@ class Vehicle
 {
 public:
 
-	Vehicle(QPoint pos, QColor col);
+	Vehicle(QPoint position, QSize size, QColor colour);
 
 	QPoint position() const;
+	QSize size() const;
 	QColor colour() const;
 
-	void set_position(QPoint position);
-	void set_colour(QColor colour);
-	void set_size(QSize size);
-
+	void setPosition(QPoint position);
+	void setSize(QSize size);
+	void setColour(QColor colour);
+	
 	void move(int dx, int dy);
 
 	void draw(QPainter& painter) const;
@@ -38,6 +42,6 @@ public:
 private:
 
 	QPoint m_position;
-	QColor m_colour;
 	QSize m_size;
+	QColor m_colour;
 };
