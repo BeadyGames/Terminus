@@ -29,6 +29,7 @@ public:
 
 	void set_position(QPoint position);
 	void set_colour(QColor colour);
+	void set_size(QSize size);
 
 	void move(int dx, int dy);
 
