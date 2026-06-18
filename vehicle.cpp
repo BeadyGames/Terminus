@@ -1,3 +1,17 @@
+/********************************* Vehicle ************************************/
+/*
+    Contains all position and colour data for a vehicle
+
+    Yellow = Good headway to bus in front
+    Red = Too close to bus in front (acceptable in some cases)
+    Green = Extended headway (this might be acceptable when delays are present)
+
+    File:   vehicle.cpp
+    Author: Nathan Gardner
+    Date:   18th June 2026
+*/
+/******************************************************************************/
+
 #include "vehicle.h"
 
 Vehicle::Vehicle(QPoint p, QColor c) :
